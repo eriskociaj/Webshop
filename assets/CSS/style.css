@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Inter:wght@600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+img,
+span,
+button {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  display: flex;
+  height: 188px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  padding-block: 4rem;
+}
+.menu {
+  display: none;
+}
+
+.nav_container {
+  position: relative;
+  width: 100%;
+  padding: 0 261px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 24px;
+  text-shadow: 0px 4px 4px #00000040;
+  font-family: "Croissant One", cursive;
+  color: #b95d66;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.navigation_bar {
+  position: absolute;
+  margin-top: 100px;
+  display: flex;
+}
+
+.navigation_bar li a {
+  align-self: center;
+  padding: 7px 16px;
+  letter-spacing: 1.5px;
+  line-height: 28px;
+  white-space: nowrap;
+  color: black;
+  font-size: 13px;
+}
+
+.international {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fac1ba;
+  width: 100%;
+}
+
+.international_delivery {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  padding: 8px;
+}
+
+.international_text {
+  font-family: "Inter", sans-serif;
+  color: #333333;
+  padding: 6px;
+}
+
+.basket {
+  display: flex;
+  position: relative;
+  top: 55px;
+  left: 500px;
+}
+
+.cart_icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  left: calc(50% - 24px / 2);
+  top: 0px;
+}
+
+.amount_items {
+  position: absolute;
+  height: 16px;
+  left: 16px;
+  right: -8px;
+  top: -8px;
+
+  background: #333333;
+  border-radius: 8px;
+}
+
+.item_number {
+  padding-left: 4.5px;
+  color: white;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 391px) {
+  header {
+height: 160px;
+  }
+  header .menu {
+    display:block;
+    position: relative;
+    right: 200px;
+    top: 42px;
+
+  }
+.basket{
+position: relative;
+top: 42px;
+left: 50px;
+}
+.title{
+  margin-left: -150px;
+  }
+  .navigation_bar {
+    margin: 0;
+    position: absolute;
+  
+    left: 0;
+    width:390px;
+    height: fit-content;
+    background-color: #fac1ba;
+    padding: 8px;
+    transition: 0.3s;
+    z-index: -1;
+  }
+
+  header .navigation_bar{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 150px;
+  }
+}
+
+.hero_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 108px;
+}
+
+.hero_text {
+  position: absolute;
+  width: 608px;
+  height: 125.88px;
+  left: calc(50% - 608px / 2);
+  top: calc(50% - 125.88px / 2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 56px;
+
+  color: #ebb2ac;
+}
+
+.view_button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 40px;
+
+  background: #ffffff;
+  border: 1px solid #ffffff;
+
+  margin-top: 16px;
+}
+
+.view {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+
+  color: #3f2a2d;
+}
