@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Inter:wght@600&display=swap");
 
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,13 +31,9 @@ img {
 }
 
 header {
-  position: absolute;
-  top: 0;
   width: 100%;
-  z-index: 100;
   background-color: white;
-  display: flex;
-  height: 188px;
+  z-index: 1000;
 }
 
 nav {
@@ -49,36 +43,30 @@ nav {
   font-family: "Inter", sans-serif;
 }
 
-section {
-  padding-block: 4rem;
-}
-.menu {
-  display: none;
-}
+
 
 .nav_container {
-  position: relative;
   width: 100%;
-  padding: 0 261px;
   display: flex;
-  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 30px;
 }
 
+.hero_container,
+.colognes_container,
+.body_kits{
+  padding: 3rem;
+}
 .title {
-  font-size: 24px;
+  font-size: 26px;
   text-shadow: 0px 4px 4px #00000040;
   font-family: "Croissant One", cursive;
   color: #b95d66;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   white-space: nowrap;
-}
-
-.navigation_bar {
-  position: absolute;
-  margin-top: 100px;
-  display: flex;
 }
 
 .navigation_bar li a {
@@ -92,9 +80,6 @@ section {
 }
 
 .international {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background-color: #fac1ba;
   width: 100%;
 }
@@ -102,8 +87,8 @@ section {
 .international_delivery {
   display: flex;
   justify-content: center;
-  font-size: 10px;
-  padding: 8px;
+  font-size: 18px;
+  padding: 6px;
 }
 
 .international_text {
@@ -113,135 +98,96 @@ section {
 }
 
 .basket {
-  display: flex;
-  position: absolute;
-  top: 38px;
-  right: 120px;
+  display: inline-block;
   pointer-events: none;
+  position: relative;
+  top: 15px;
 }
 
 .cart_icon {
-  margin: 18px;
   pointer-events: auto;
 }
 .amount_items {
-  position: absolute;
-  height: 20px;
-  right: 8px;
-  top: 8px;
-
+  position: relative;
+  bottom: 35px;
+  left: 17px;
   background: #333333;
-  border-radius: 20px;
+  border-radius: 40px;
+  padding: 2px;
 }
 
 .item_number {
-  padding: 5px;
   color: white;
-  font-size: 11px;
+  font-size: 13px;
+  text-align: center;
+
 }
 
-@media only screen and (max-width: 391px) {
-  header {
-    margin-top: 12px;
-  }
+#menu {
+  pointer-events: auto;
+}
 
-  header .menu {
-    display: block;
-    position: relative;
-    right: 200px;
-    top: 42px;
-    pointer-events: auto;
-  }
-  .basket {
-    position: absolute;
-    top: 42px;
-    right: 120px;
-  }
-  .title {
-    margin-left: -150px;
-  }
-  .navigation_bar {
-    margin: 0;
-    position: absolute;
-    top: -1000%;
-    left: 0;
-    width: 390px;
-    height: fit-content;
-    background-color: #fac1ba;
-    padding: 8px;
-    transition: 0.3s;
-    z-index: -1;
-  }
+.navigation_bar {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  width: 100%;
+  height: fit-content;
+  background-color: #fac1ba;
+  padding: 8px;
+  transition: 0.3s;
+}
 
-  header .navigation_bar .active {
-    top: 0;
-  }
-  header .navigation_bar {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 150px;
-  }
+.active {
+  left: 0;
+  z-index: 1;
+}
+.navigation_bar {
+  display: grid;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .hero_container {
+  align-items: flex-start;
+  background-image: url(hero.webp);
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 108px;
-  max-height: 600px;
+  gap: 7px;
+  height: calc(70vh - 74px);
+  padding: calc(16vh + 100px) 0;
 }
 
 .hero_text {
-  position: absolute;
-  width: 608px;
-  height: 125.88px;
-  left: calc(50% - 608px / 2);
-  top: calc(50% - 125.88px / 2);
-
+  position: relative;
+  bottom: 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(40vh + 10rem); 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
+  font-family: "Inter";
+  font-size: calc(1.5rem + 0.5vw); 
 }
 
-.hero_container img {
-  z-index: -1;
-}
+
 
 .slogan {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
   line-height: 56px;
 
   color: #ebb2ac;
-}
-
-.view_button {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 160px;
-  height: 40px;
-
-  background: #ffffff;
-  border: 1px solid #ffffff;
-
-  margin-top: 16px;
-}
-
-.view {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 28px;
-
-  color: #3f2a2d;
 }
 
 .colognes_container {
@@ -265,18 +211,15 @@ section {
   padding-bottom: 35px;
 }
 
-.hot_products {
-  width: 65%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10%, auto));
-  gap: 32px;
+.hot_products,
+.kit_products {
+  width: 75%;
 }
 
 .product-details {
   display: grid;
-
   gap: 20px;
-  font-weight: 600;
+  text-align: center;
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.25px;
@@ -286,6 +229,7 @@ section {
 .stars {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .product-price {
@@ -294,7 +238,7 @@ section {
 
 .btn-shop-now {
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   box-sizing: border-box;
 
   display: flex;
@@ -309,13 +253,7 @@ section {
 
 .body_kits {
   font-family: "Inter", sans-serif;
-margin: 70px;
-}
-.kit_products {
-  width: 40%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, auto));
-  gap: 120px;
+
 }
 
 .kit_off {
@@ -332,12 +270,12 @@ margin: 70px;
   line-height: 28px;
   letter-spacing: 5px;
   padding-bottom: 75px;
+  white-space: nowrap;
 }
 
 footer {
   background-color: #fddfdb;
-  border-top: 1px solid #cccccc;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .connect_socials {
@@ -369,112 +307,230 @@ footer {
 
   padding-top: 30px;
 }
-
 .info_pause {
   align-items: flex-start;
   background-image: url(multi.webp);
   background-position: 50% 50%;
   background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 7px;
-  height: 700px;
-  margin-top: 74px;
-  padding: 264px 227px;
+  height: calc(70vh - 74px);
+  padding: calc(16vh + 100px) 0;
 }
 
+
 .perfumes_text {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(40vh + 10rem); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
+  font-family: "Inter";
+  font-size: calc(1.5rem + 0.5vw); 
   color: #ffffff;
 }
 
-.continue_buttons {
-  letter-spacing: 0.3px;
-  line-height: 28.1px;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
+.view_button,
+.continue_kits {
+  align-self: center;
+  padding: 6px 19.17px 5.68px 28px;
+  background-color: white;
 }
 
-.continue_kits a {
-  align-items: flex-start;
-  border: 1px solid;
-  display: flex;
-  position: relative;
-  width: fit-content;
-  background-color: white;
-  margin-left: 82.48px;
-  margin-top: 10px;
-  padding: 5px 20px 9.08px 20px;
-
-  border: 1px solid #ffffff;
+.continue_buttons,
+.read_a,
+.view {
+  text-align: center;
+  font-size: 14px;
+  line-height: 28px;
 
   font-family: "Inter";
-  font-size: 15px;
-
   text-transform: uppercase;
+  white-space: nowrap;
+}
 
+.view,
+.continue_buttons{
   color: #3f2a2d;
 }
 
 .more_info {
-  align-items: flex-end;
+  align-items: flex-start;
   background-image: url(chanel.webp);
   background-position: 50% 50%;
   background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  height: 700px;
-  width: 100%;
-  padding: 224px 520px;
+  gap: 7px;
+  height: calc(70vh - 74px);
+  padding: calc(16vh + 100px) 0;
   margin-bottom: 25px;
 }
 
 .read_more {
   align-self: center;
-  background-color: #333333;
-
+  background-color: #C4938F;
   margin-right: 6.82px;
   padding: 6px 19.17px 5.68px 28px;
 }
 
+
 .read_a {
   margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
-  
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 28px;
-
-letter-spacing: 0.3px;
-text-transform: uppercase;
-
-color: white;
+  letter-spacing: 0.3px;
+  color: white;
 }
 
 .info_text {
-  height: 170px;
-  letter-spacing: 0.25px;
-  line-height: 56px;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(40vh + 10rem); /* Responsive height using vh and rem */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 474px;
-font-family: 'Inter';
-font-size: 45px;
 
-color: #333333;
+  font-family: "Inter";
+  font-size: calc(1.5rem + 0.5vw); /* Responsive font size using rem and vw */
+
+  color: #C4938F;
+  text-shadow: 1px 1px 2px black;
 }
 
 
+
+.continue_button .perfumes_text {
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: calc(1.5rem + 2vw); /* Updated font size for mobile devices */
+}
+
+@media only screen and (min-width: 1008px) {
+  /*Change grid to 4*/
+  /* Text in perfume pause on left*/
+  .hot_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .read_more{
+    margin: -50px;
+  }
+}
+
+/* Media query for tablet devices */
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  /* Center text in perfume pause */
+  /*Greater gap in header li a*/
+  .navigation_bar > ul > li {
+    padding-left: 18px;
+  }
+
+  .hot_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 102px; /* Add 32px gap between grid items */
+  }
+
+
+  .perfumes_text {
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: calc(1.2rem + 2vw); /* Updated font size for tablet devices */
+  }
+
+  .read_more{
+    margin: -5vw;
+  }
+}
+
+/* Media query for tablet and desktop devices */
+@media only screen and (min-width: 640px) {
+  #menu {
+    display: none;
+  }
+
+  .basket{
+position: absolute;
+  top: 4vh;
+  right: 5rem;
+  }
+
+  .nav_container {
+    display: flex;
+    justify-content: center;
+
+  }
+  .navigation_bar{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background-color: transparent;
+    transition: none;
+
+  }
+  
+  .navigation_bar > ul {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    white-space: nowrap;
+    color: black;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 24px;
+    color: #b95d66;
+  }
+
+  .navigation_bar {
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+  }
+
+  .international_delivery {
+    font-size: calc(18px - 0.5vw);
+  }
+
+  .product-name,
+  .ratings,
+  .product-price {
+    display: grid;
+    justify-items: baseline;
+  }
+
+  .kit_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+
+  .read_more {
+    background-color: #333333;
+  }
+  .info_text {
+    color: #333333;
+    text-shadow: none;
+  }
+}

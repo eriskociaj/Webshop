@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <!--=============== CSS ===============-->
   <link href="assets/CSS/style.css" rel="stylesheet">
+  <script src="script.js"></script>
   <title>Scentily</title>
 </head>
 
@@ -16,8 +17,10 @@
   <!--==================== HEADER ====================-->
   <header class="header" id="header">
     <nav class="nav_container">
-      <div class="menu" id="menu_toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="#000"></path></svg>
+      <div id="menu">
+        <a href="#menu" id="menu_toggle" onclick="cart()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="#000"></path></svg>
+        </a>
       </div>
       <div class="title">
         <span class="header_title">S C E N T I L Y</span>
@@ -28,21 +31,23 @@
           <div class="amount_items"><span class="item_number">0</span></div>
         </a>
       </div>
-      <ul class="navigation_bar" id="active">
+      <div class="navigation_bar" >
+      <ul class="active">
         <li><a href="#home">HOME</a></li>
         <li><a href="#colognes">COLOGNES</a></li>
         <li><a href="#bodykits">SETS &amp; KITS</a></li>
         <li><a href="#socials">ABOUT US</a></li>
       </ul>
-    </nav>
-    <div class="international">
-      <div class="international_delivery">
-        <img src="pictures/plane.svg" alt="airplane_icon">
-        <div class="international_text">INTERNATIONAL DELIVERY</div>
-      </div>
     </div>
-  </header>
-
+  </nav>
+  <div class="international">
+    <div class="international_delivery">
+      <img src="pictures/plane.svg" alt="airplane_icon">
+      <div class="international_text">INTERNATIONAL DELIVERY</div>
+    </div>
+  </div>
+</header>
+  
   <!--==================== HERO ====================-->
   <section class="hero_container" id="home">
     <div class="hero_text">
@@ -53,7 +58,6 @@
       </a>
     </div>
   </div>
-  <img src="pictures/hero.webp" alt="hero_image">
   </section>
 
   <!--==================== COLOGNES ====================-->
@@ -245,9 +249,9 @@
 
   <div class="more_info">
     <div class="info_text">
-      <p>I'm committed to buy 
-        from Scentily. 
-        But who are you?</p>
+      <p>I'm committed to buy</p>
+        <p>from Scentily. But</p>
+        <p> who are you?</p>
     </div>
     <div class="read_more">
       <a href="#socials"  class="read_a">
@@ -270,13 +274,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    menu = document.querySelector(".menu");
-    navigation_bar = document.querySelector(".navigation_bar");
-    menu.onclick = function() {
-        nav.classList.toggle("active");
-    }
-</script>
+  
 </body>
 
 </html>
