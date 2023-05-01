@@ -18,7 +18,7 @@
   <header class="header" id="header">
     <nav class="nav_container">
       <div id="menu">
-        <a href="#menu" id="menu_toggle" onclick="cart()">
+        <a href="#menu" id="menu_toggle" onclick="menuBox()">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
             <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="#000"></path>
           </svg>
@@ -28,10 +28,8 @@
         <span class="header_title">S C E N T I L Y</span>
       </div>
       <div class="basket">
-        <a href="#">
-          <div id="cart_icon"><img src="pictures/shopping_cart.svg" alt="shopping_cart"></div>
-          <div class="amount_items"><span class="item_number">0</span></div>
-        </a>
+        <img src="pictures/shopping_cart.svg" alt="shopping_cart" id="cart_icon">
+        <div class="amount_items"><span class="item_number">0</span></div>
       </div>
       <div class="navigation_bar">
         <ul class="active">
@@ -49,39 +47,41 @@
       </div>
     </div>
     <!--==================== CART ====================-->
-    <div class="cart">
-      <h2 class="cart-tittle">Your Cart</h2>
-  
-      <!-- CONTENT -->
-      <div class="cart-content">
-  
-        <!-- TEST BOX -->
-        <div class="cart-box">
-          <img src="pictures/blackopium.webp" alt="" class="cart-img">
-          <div class="detail-box">
-            <div class="cart-product-tittle">Black Opium - 250 ml</div>
-            <div class="cart-price">90$</div>
-            <input type="number" value="1" class="cart-quantinty">
+    <div class="cart" id="cart">
+      <div class="act">
+        <h2 class="cart-tittle">Your Cart</h2>
+
+        <!-- CONTENT -->
+        <div class="cart-content">
+
+          <!-- TEST BOX -->
+          <div class="cart-box">
+            <img src="pictures/blackopium.webp" alt="" class="cart-img">
+            <div class="detail-box">
+              <div class="cart-product-tittle">Black Opium - 250 ml</div>
+              <div class="cart-price">90$</div>
+              <input type="number" value="1" class="cart-quantinty">
+            </div>
+
+            <!-- REMOVE CART -->
+            <img src="pictures/delete-bin-5-line.svg" alt="delete" class="cart-remove">
           </div>
-  
-          <!-- REMOVE CART -->
-          <img src="pictures/delete-bin-5-line.svg" alt="delete" class="cart-remove">
-        </div>
           <!-- TOTAL AND BUY BUTTON -->
 
-    <!-- TOTAL -->
-    <div class="total">
-      <div class="total-tittle">Total</div>
-      <div class="total-price">0$</div>
-    </div>
-    <!-- BUY BUTTON -->
-    <button type="button" class="btn-buy">Buy Now</button>
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="total-tittle">Total</div>
+            <div class="total-price">0$</div>
+          </div>
+          <!-- BUY BUTTON -->
+          <button type="button" class="btn-buy">Buy Now</button>
 
           <!-- CART CLOSE -->
-          <img src="pictures/close-line.svg" alt="close" id="cart-close">
-  
-  
-        
+          <img src="pictures/close-line.svg" alt="close" id="cart-close" onclick="closeCart()">
+
+
+
+        </div>
       </div>
     </div>
   </header>
@@ -143,8 +143,8 @@
                 </div>
               </div>
               <div class="product-price">65€</div>
-              <div class="product-action">
-                <a href="#" class="btn-shop-now add-cart">SHOP NOW</a>
+              <div class="product-action" onclick=" handle_addCartItem()">
+                <div class="btn-shop-now add-cart">SHOP NOW</div>
               </div>
             </div>
           </div>
@@ -189,8 +189,8 @@
                 </div>
               </div>
               <div class="product-price">90€</div>
-              <div class="product-action">
-                <a href="#" class="btn-shop-now add-cart">SHOP NOW</a>
+              <div class="product-action" onclick="addEvents()">
+                <div class="btn-shop-now add-cart" onclick="addEvents()">SHOP NOW</div>
               </div>
             </div>
           </div>
@@ -236,7 +236,7 @@
               </div>
               <div class="product-price">195€</div>
               <div class="product-action">
-                <a href="#" class="btn-shop-now add-cart">SHOP NOW</a>
+                <div class="btn-shop-now add-cart">SHOP NOW</div>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@
               </div>
               <div class="product-price">200€</div>
               <div class="product-action">
-                <a href="#" class="btn-shop-now add-cart">SHOP NOW</a>
+                <div class="btn-shop-now add-cart">SHOP NOW</div>
               </div>
             </div>
           </div>
@@ -351,7 +351,7 @@
               </div>
               <div class="product-price">53€</div>
               <div class="product-action">
-                <a href="#" class="btn-shop-now add-cart">SHOP NOW</a>
+                <div class="btn-shop-now add-cart">SHOP NOW</div>
               </div>
             </div>
           </div>
@@ -397,7 +397,7 @@
               </div>
               <div class="product-price">65€</div>
               <div class="product-action">
-                <a href="#" class="btn-shop-now add-cart">SHOP NOW</a>
+                <div class="btn-shop-now add-cart">SHOP NOW</div>
               </div>
             </div>
           </div>
